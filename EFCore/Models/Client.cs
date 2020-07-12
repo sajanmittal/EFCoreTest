@@ -15,6 +15,5 @@ namespace EFCore.Models
 
 	public class ClientMapping : ModelMapping<Client>
 	{
-		
 	}
 }

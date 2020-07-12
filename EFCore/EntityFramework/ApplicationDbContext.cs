@@ -6,19 +6,16 @@ namespace EFCore.EntityFramework
 {
 	public class ApplicationDbContext : DbContext, IApplicationDbContext
 	{
-		public ApplicationDbContext(DbContextOptions options):base(options)
+		public ApplicationDbContext(DbContextOptions options) : base(options)
 		{
-
 		}
 
 		public DbContext Context => this;
-
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
 			modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 		}
-
 	}
 }

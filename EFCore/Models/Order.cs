@@ -19,6 +19,5 @@ namespace EFCore.Models
 
 	public class OrderMapping : ModelMapping<Order>
 	{
-
 	}
 }

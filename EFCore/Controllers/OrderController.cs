@@ -9,7 +9,6 @@ namespace EFCore.Controllers
 	[Route("[controller]")]
 	public class OrderController : ControllerBase
 	{
-
 		private IOrderService orderService;
 
 		public OrderController(IOrderService orderService)

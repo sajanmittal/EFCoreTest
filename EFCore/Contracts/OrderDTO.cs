@@ -1,6 +1,4 @@
-﻿using EFCore.Models;
-
-namespace EFCore.Contracts
+﻿namespace EFCore.Contracts
 {
 	public class OrderDTO
 	{

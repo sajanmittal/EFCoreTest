@@ -66,7 +66,7 @@ namespace EFCore.Services
 
 		private async Task<List<OrderDTO>> GetAsync(int orderid)
 		{
-		//multiple db context in single query. need to fix this issue.
+			//multiple db context in single query. need to fix this issue.
 			var query = from order in await orders.GetAll()
 						join product in await products.GetAll() on order.ProductId equals product.ProductId
 						join client in await clients.GetAll() on order.ClientId equals client.ClientId
@@ -74,9 +74,9 @@ namespace EFCore.Services
 						{
 							Client = client.ClientName,
 							Count = order.ProductCount,
-							Product  = product.ProductName,
+							Product = product.ProductName,
 							Amount = product.Amount,
-							Total = order.ProductCount*(product.Amount),
+							Total = order.ProductCount * (product.Amount),
 							OrderId = order.OrderId,
 							ProductId = product.ProductId,
 							ClientId = client.ClientId

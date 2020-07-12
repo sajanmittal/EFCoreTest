@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using EFCore.Contracts;
-using EFCore.Models;
 
 namespace EFCore.Services.Interfaces
 {

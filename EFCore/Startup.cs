@@ -25,7 +25,7 @@ namespace EFCore
 		{
 			services.AddControllers();
 			services.AddMvc();
-			services.AddDbContextPool<ApplicationDbContext>((options) => { options.UseSqlServer(Configuration.GetValue<string>("ConString"));});
+			services.AddDbContextPool<ApplicationDbContext>((options) => { options.UseSqlServer(Configuration.GetValue<string>("ConString")); });
 			services.AddTransient<IApplicationDbContext, ApplicationDbContext>();
 			services.AddTransient(typeof(IEFRepository<>), typeof(EFRepository<>));
 			services.AddTransient(typeof(IEFService<>), typeof(EFService<>));

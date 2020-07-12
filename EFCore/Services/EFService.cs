@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using EFCore.EntityFramework.Interfaces;
 using EFCore.Services.Interfaces;
@@ -10,7 +9,7 @@ namespace EFCore.Services
 	public class EFService<T> : IEFService<T> where T : class
 	{
 		private readonly IEFRepository<T> repository;
-		
+
 		public EFService(IEFRepository<T> repository)
 		{
 			this.repository = repository;
